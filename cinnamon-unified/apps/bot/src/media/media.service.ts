@@ -1,1 +1,0 @@
-import { Injectable, Logger } from '@nestjs/common'; @Injectable() export class PlaceholderService { private readonly logger = new Logger(PlaceholderService.name); constructor() { this.logger.log('Service initialized'); } }
