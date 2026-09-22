@@ -1,0 +1,116 @@
+syntax = "proto3";
+
+package cinnamon.rpg;
+
+// Request untuk battle calculation
+message BattleRequest {
+  PlayerStats player = 1;
+  EnemyStats enemy = 2;
+  Equipment equipment = 3;
+  Skill skill = 4;
+  int64 seed = 5;
+}
+
+message PlayerStats {
+  int32 hp = 1;
+  int32 atk = 2;
+  int32 def = 3;
+  int32 crit = 4;
+  int32 luck = 5;
+}
+
+message EnemyStats {
+  int32 hp = 1;
+  int32 atk = 2;
+  int32 def = 3;
+  string difficulty = 4;
+}
+
+message Equipment {
+  Item weapon = 1;
+  Item armor = 2;
+  Item accessory = 3;
+}
+
+message Item {
+  string item_id = 1;
+  string name = 2;
+  string rarity = 3;
+  int32 stat_bonus = 4;
+}
+
+message Skill {
+  string skill_id = 1;
+  string name = 2;
+  int32 level = 3;
+}
+
+// Response dari battle calculation
+message BattleResult {
+  int32 player_damage = 1;
+  int32 enemy_damage = 2;
+  bool is_critical = 3;
+  int32 player_hp_remaining = 4;
+  int32 enemy_hp_remaining = 5;
+  repeated LootDrop loot = 6;
+  BattleLog log = 7;
+}
+
+message LootDrop {
+  string item_id = 1;
+  string name = 2;
+  int32 quantity = 3;
+  string rarity = 4;
+}
+
+message BattleLog {
+  repeated string events = 1;
+}
+
+// Service definition
+service RPGEngine {
+  rpc CalculateBattle(BattleRequest) returns (BattleResult);
+  rpc CalculateSkill(SkillRequest) returns (SkillResult);
+  rpc GenerateLoot(LootRequest) returns (LootResult);
+  rpc CalculateDungeon(DungeonRequest) returns (DungeonResult);
+}
+
+message SkillRequest {
+  PlayerStats player = 1;
+  Skill skill = 2;
+  int64 seed = 3;
+}
+
+message SkillResult {
+  int32 effect_value = 1;
+  string effect_type = 2;
+  int32 duration = 3;
+}
+
+message LootRequest {
+  string enemy_type = 1;
+  string difficulty = 2;
+  int32 player_luck = 3;
+  int64 seed = 4;
+}
+
+message LootResult {
+  repeated LootDrop drops = 1;
+  int32 gold = 2;
+  int32 xp = 3;
+}
+
+message DungeonRequest {
+  PlayerStats player = 1;
+  Equipment equipment = 2;
+  string dungeon_level = 3;
+  int64 seed = 4;
+}
+
+message DungeonResult {
+  bool success = 1;
+  int32 floors_cleared = 2;
+  repeated LootDrop rewards = 3;
+  int32 xp_gained = 4;
+  BattleLog log = 5;
+}

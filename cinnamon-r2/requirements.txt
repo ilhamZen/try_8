@@ -1,0 +1,14 @@
+neonize
+APScheduler
+pytz
+httpx
+Pillow
+qrcode
+gTTS
+yt-dlp
+psutil
+PyMuPDF
+python-docx
+openpyxl
+reportlab
+opencv-python-headless
