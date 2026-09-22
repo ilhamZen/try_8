@@ -3,7 +3,6 @@
  * Connects Python orchestrator to WhatsApp via Baileys
  */
 
-const makeWASocket = require('@whiskeysockets/baileys').default;
 const { default: makeWASocket, DisconnectReason, useMultiFileAuthState } = require('@whiskeysockets/baileys');
 const { Boom } = require('@hapi/boom');
 const readline = require('readline');
