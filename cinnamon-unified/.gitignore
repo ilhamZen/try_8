@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+
+# Runtime Data
+data/cinnamon.db
+data/cinnamon.db-wal
+data/cinnamon.db-shm
+data/backups/
+data/wa-auth/
+
+# Media & Temporary Files
+media_inbox/
+logs/
+*.tmp
+*.temp
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build Output
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# C# Engine (if using)
+apps/engine/bin/
+apps/engine/obj/
+
+# Test Coverage
+coverage/
+
+# Protobuf Generated (regenerated)
+proto/generated/

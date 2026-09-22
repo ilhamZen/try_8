@@ -1,26 +1,25 @@
 ```
 # Dependencies
 node_modules/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
-venv/
-.env
-.env.local
-*.env.*
+.pnpm-store/
+.npm/
 
-# Build artifacts
+# Build outputs
 dist/
 build/
 target/
+lib/
 *.so
-*.dylib
-*.dll
 
-# Logs
-*.log
+# TypeScript/JavaScript
+*.js.map
+*.tsbuildinfo
+coverage/
+
+# Environment variables
+.env
+.env.local
+.env.*
 
 # IDE
 .vscode/
@@ -28,41 +27,52 @@ target/
 *.swp
 *.swo
 
+# Logs
+*.log
+
 # OS
 .DS_Store
 Thumbs.db
 
-# Testing
-.coverage
+# Tests
+.vitest/
 coverage/
-htmlcov/
-
-# Python specific
-*.pyc
-__pycache__/
-*.pyo
-*.pyd
-.Python
-*.so
-.libs/
-.pytest_cache/
-.mypy_cache/
-
-# Node.js specific
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# TypeScript/JavaScript
-*.tsbuildinfo
-*.js.map
-*.jsx.map
-*.ts.map
 
 # Temporary files
 *.tmp
 *.temp
-*.bak
-*.backup
+
+# Compiled Python (if any Python files exist in the project)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database
+*.db
+*.sqlite
+
+# Compression
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```
