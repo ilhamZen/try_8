@@ -1,0 +1,17 @@
+{
+  "name": "cinnamon-r1f-bridge",
+  "version": "1.0.0",
+  "description": "CINNAMON R1F - Baileys Bridge for WhatsApp",
+  "main": "src/adapters/baileys_bridge.js",
+  "scripts": {
+    "start": "node src/adapters/baileys_bridge.js",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.0",
+    "@hapi/boom": "^10.0.1",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "author": "Cinnamon Team",
+  "license": "Apache-2.0"
+}

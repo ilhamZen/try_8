@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+data/
+media_inbox/
+tiktok_downloads/
+ytm_downloads/
+wa_session.db
+*.log
