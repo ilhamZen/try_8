@@ -7,19 +7,47 @@ node_modules/
 # Build outputs
 dist/
 build/
-target/
-lib/
-*.so
+.next/
+.nuxt/
+.unbuild/
 
-# TypeScript/JavaScript
-*.js.map
-*.tsbuildinfo
-coverage/
-
-# Environment variables
+# Runtime data
 .env
 .env.local
 .env.*
+.env.local.*
+.env.production
+.env.production.local
+.env.development
+.env.development.local
+
+# Database migrations metadata (if not intended for version control)
+cinnamon-unified/db/migrations/meta/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+.nyc_output/
+istanbul/
+.html
+
+# Testing
+.jest/
+jest/
+vitest/
+
+# Environment specific
+.env.example
+cinnamon-unified/.env.example
+
+# OS generated files
+.DS_Store
+Thumbs.db
 
 # IDE
 .vscode/
@@ -27,52 +55,37 @@ coverage/
 *.swp
 *.swo
 
-# Logs
-*.log
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
 
-# OS
-.DS_Store
-Thumbs.db
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# Tests
-.vitest/
-coverage/
+# TypeScript
+*.tsbuildinfo
+*.tsx.snap
+*.snap
 
-# Temporary files
+# General
 *.tmp
 *.temp
-
-# Compiled Python (if any Python files exist in the project)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Database
-*.db
-*.sqlite
-
-# Compression
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+.DS_Store
+Thumbs.db
 ```
